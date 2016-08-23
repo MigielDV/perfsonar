@@ -1,0 +1,78 @@
+{
+   "administrators" : [
+      {
+         "email" : "admin@netherlight.net",
+         "name" : "NetherLight Admin"
+      }
+   ],
+   "organizations" : [
+      {
+         "sites" : [
+            {
+               "hosts" : [
+                  {
+                     "addresses" : [
+                        "145.145.34.74"
+                     ],
+                     "description" : "PerfSONAR1 @ NetherLight"
+                  }
+               ]
+            },
+            {
+               "hosts" : [
+                  {
+                     "addresses" : [
+                        "145.145.34.82"
+                     ],
+                     "description" : "PerfSONAR2 @ NetherLight"
+                  }
+               ]
+            }
+         ],
+         "description" : "SURFnet"
+      }
+   ],
+   "tests" : [
+      {
+         "members" : {
+            "members" : [
+               "145.145.34.74",
+               "145.145.34.82"
+            ],
+            "type" : "mesh"
+         },
+         "parameters" : {
+            "protocol" : "tcp",
+            "omit_interval" : "5",
+            "duration" : "20",
+            "interval" : "21600",
+            "force_bidirectional" : "1",
+            "tool" : "bwctl/iperf3",
+            "random_start_percentage" : "10",
+            "type" : "perfsonarbuoy/bwctl"
+         },
+         "description" : "Througput Testing"
+      },
+      {
+         "members" : {
+            "members" : [
+               "145.145.34.74",
+               "145.145.34.82"
+            ],
+            "type" : "mesh"
+         },
+         "parameters" : {
+            "force_bidirectional" : "1",
+            "loss_threshold" : "10",
+            "bucket_width" : "0.0001",
+            "packet_padding" : "0",
+            "sample_count" : "600",
+            "packet_interval" : "0.1",
+            "type" : "perfsonarbuoy/owamp",
+            "session_count" : "10800"
+         },
+         "description" : "OWAMP Testing"
+      }
+   ],
+   "description" : "NetherLight Mesh Config"
+}
