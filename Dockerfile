@@ -9,6 +9,6 @@ RUN yum clean all
 RUN yum -y install perfsonar-toolkit perfsonar-centralmanagement
 ADD start.sh /usr/local/bin/start.sh
 ADD lsregistrationdaemon.conf /etc/perfsonar/lsregistrationdaemon.conf
-ADD meshconfig-agent.conf /etc/perfsonar/meshconfig-agent.conf
+ADD regulartesting.conf /root/regulartesting.conf
 VOLUME /var/run
 ENTRYPOINT /usr/local/bin/start.sh && bash
