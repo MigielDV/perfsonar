@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Merge NetherLight testing files"
+cat /root/regulartesting.conf /etc/perfsonar/regulartesting.conf > /etc/perfsonar/regulartesting.conf
 echo "Starting OWAMP..."
 /etc/init.d/owamp-server start
 echo "Starting BWCTL..."
