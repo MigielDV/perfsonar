@@ -34,6 +34,8 @@ To install this perfsonar docker image do the following:
 
 >cd perfsonar
 
+Make sure you edit the lsregistrationdaemon.conf file such that it matches your needs.
+
 >docker build -t perfsonar .
 
 >docker run --privileged -P --net=host -v /var/run -i -t perfsonar
