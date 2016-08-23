@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Merge NetherLight testing files"
+echo "Merge NetherLight testing files..."
 echo -e "$(cat /root/regulartesting.conf)\n$(cat /etc/perfsonar/regulartesting.conf)" > /etc/perfsonar/regulartesting.conf
 echo "Starting OWAMP..."
 /etc/init.d/owamp-server start
