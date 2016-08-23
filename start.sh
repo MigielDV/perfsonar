@@ -19,8 +19,6 @@ echo "Starting CONFIGDAEMON..."
 /etc/init.d/perfsonar-configdaemon start
 echo "Starting NIC PARAMETERS..."
 /etc/init.d/perfsonar-configure_nic_parameters start
-echo "Stopping OPPD..."
-/etc/init.d/perfsonar-oppd-server stop
 echo "Starting OPPD..."
 /etc/init.d/perfsonar-oppd-server start
 echo "Starting bash..."
