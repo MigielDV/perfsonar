@@ -21,4 +21,4 @@ echo "Starting NIC PARAMETERS..."
 /etc/init.d/perfsonar-configure_nic_parameters start
 echo "Starting OPPD..."
 /etc/init.d/perfsonar-oppd-server start
-echo "Starting bash..."
+echo "start.sh Finished!"
